@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Extract.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="VueConStr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Provider=SQLOLEDB.1;Persist Security Info=True;Password=Bgt56yhN;User ID=cssql2017;Server=dmssqlc1\app;Database=Apps;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
