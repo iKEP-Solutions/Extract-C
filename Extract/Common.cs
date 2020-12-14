@@ -236,12 +236,31 @@ namespace Extract
             aList.DataSource = LaListe;
         }
 
-        public static void ComboSelectValue(string LaValeur, ComboBox aCombo)
+        public static void ComboSetVal(string LaValeur, ComboBox aCombo)
         {
             foreach (ListItem l in (aCombo.Items))
             {
                 if (l.Val.ToString() == LaValeur) { aCombo.SelectedItem = l; }
             }
+        }
+
+        public static string ComboGetVal(ComboBox aCombo)
+        {
+            return ((ListItem)(aCombo.SelectedItem)).Val.ToString();
+        }
+
+
+        public static void ListSetVal(string LaValeur, ListBox aList)
+        {
+            foreach (ListItem l in (aList.Items))
+            {
+                if (l.Val.ToString() == LaValeur) { aList.SelectedItem = l; }
+            }
+        }
+
+        public static string ListGetVal(ListBox aList)
+        {
+            return ((ListItem)(aList.SelectedItem)).Val.ToString();
         }
 
 
@@ -278,6 +297,8 @@ namespace Extract
                         if (c.GetType().ToString().Contains("ComboBox")) {
                             ((ComboBox)c).SelectedIndex = -1;
                         }
+                        
+                        if (c.GetType().ToString().Contains("Label")) { c.Text = ""; }
 
                         if (c.GetType().ToString().Contains("GroupBox")) { FormVide(c); }
                     } catch (Exception ex) {
@@ -314,7 +335,7 @@ namespace Extract
 
                             if (c.GetType().ToString().Contains("ComboBox")) {
                                 //LeRs.GetFieldType(3).Name
-                                ComboSelectValue(LaValeur, (ComboBox)c);
+                                ComboSetVal(LaValeur, (ComboBox)c);
                             }
 
                         } catch (Exception ex)

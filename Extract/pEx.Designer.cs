@@ -30,9 +30,9 @@
         {
             this.StatusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tInit = new System.Windows.Forms.ToolStripStatusLabel();
+            this.i_info = new System.Windows.Forms.ToolStripStatusLabel();
             this.lVue = new System.Windows.Forms.ListBox();
             this.Button1 = new System.Windows.Forms.Button();
-            this.i_info = new System.Windows.Forms.ToolStripStatusLabel();
             this.StatusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,32 +56,6 @@
             this.tInit.Text = "init";
             this.tInit.Click += new System.EventHandler(this.tInit_Click);
             // 
-            // lVue
-            // 
-            this.lVue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lVue.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lVue.FormattingEnabled = true;
-            this.lVue.Location = new System.Drawing.Point(3, 10);
-            this.lVue.Name = "lVue";
-            this.lVue.Size = new System.Drawing.Size(194, 442);
-            this.lVue.Sorted = true;
-            this.lVue.TabIndex = 28;
-            this.lVue.SelectedIndexChanged += new System.EventHandler(this.lVue_SelectedIndexChanged);
-            this.lVue.DoubleClick += new System.EventHandler(this.lVue_MouseDoubleClick);
-            // 
-            // Button1
-            // 
-            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Button1.Location = new System.Drawing.Point(3, 457);
-            this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(194, 32);
-            this.Button1.TabIndex = 26;
-            this.Button1.Text = "Extraire";
-            this.Button1.UseVisualStyleBackColor = true;
-            this.Button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
             // i_info
             // 
             this.i_info.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -96,7 +70,35 @@
             this.i_info.Spring = true;
             this.i_info.Tag = "";
             this.i_info.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.i_info.Click += new System.EventHandler(this.i_info_Click);
             this.i_info.DoubleClick += new System.EventHandler(this.Param);
+            // 
+            // lVue
+            // 
+            this.lVue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lVue.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lVue.FormattingEnabled = true;
+            this.lVue.Location = new System.Drawing.Point(3, 10);
+            this.lVue.Name = "lVue";
+            this.lVue.Size = new System.Drawing.Size(194, 442);
+            this.lVue.Sorted = true;
+            this.lVue.TabIndex = 28;
+            this.lVue.SelectedIndexChanged += new System.EventHandler(this.lVue_SelectedIndexChanged);
+            this.lVue.DoubleClick += new System.EventHandler(this.lVue_MouseDoubleClick);
+            // 
+            // Button1
+            // 
+            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button1.Location = new System.Drawing.Point(3, 457);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(194, 32);
+            this.Button1.TabIndex = 26;
+            this.Button1.Text = "Extraire";
+            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // pEx
             // 

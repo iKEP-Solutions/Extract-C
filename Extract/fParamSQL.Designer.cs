@@ -57,9 +57,9 @@
             // 
             // tNom
             // 
-            this.tNom.Location = new System.Drawing.Point(243, 12);
+            this.tNom.Location = new System.Drawing.Point(264, 8);
             this.tNom.Name = "tNom";
-            this.tNom.Size = new System.Drawing.Size(509, 20);
+            this.tNom.Size = new System.Drawing.Size(310, 20);
             this.tNom.TabIndex = 1;
             this.tNom.Tag = "nom,t";
             // 
@@ -70,14 +70,14 @@
             this.tSQL.Multiline = true;
             this.tSQL.Name = "tSQL";
             this.tSQL.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tSQL.Size = new System.Drawing.Size(533, 154);
+            this.tSQL.Size = new System.Drawing.Size(533, 194);
             this.tSQL.TabIndex = 2;
             this.tSQL.Tag = "CmdSQL,t";
             // 
             // tID
             // 
             this.tID.AutoSize = true;
-            this.tID.Location = new System.Drawing.Point(758, 15);
+            this.tID.Location = new System.Drawing.Point(240, 11);
             this.tID.Name = "tID";
             this.tID.Size = new System.Drawing.Size(18, 13);
             this.tID.TabIndex = 3;
@@ -88,9 +88,9 @@
             // 
             this.lCon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lCon.FormattingEnabled = true;
-            this.lCon.Location = new System.Drawing.Point(243, 201);
+            this.lCon.Location = new System.Drawing.Point(580, 7);
             this.lCon.Name = "lCon";
-            this.lCon.Size = new System.Drawing.Size(495, 21);
+            this.lCon.Size = new System.Drawing.Size(148, 21);
             this.lCon.TabIndex = 4;
             this.lCon.Tag = "constr_id";
             // 
@@ -98,7 +98,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(701, 550);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 28);
             this.button1.TabIndex = 5;
             this.button1.Text = "Enregistrer";
             this.button1.UseVisualStyleBackColor = true;
@@ -106,7 +106,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(744, 201);
+            this.button2.Location = new System.Drawing.Point(744, 6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(32, 21);
             this.button2.TabIndex = 6;
@@ -118,7 +118,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(12, 550);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(75, 28);
             this.button3.TabIndex = 7;
             this.button3.Text = "Supprimer";
             this.button3.UseVisualStyleBackColor = true;
@@ -128,7 +128,7 @@
             // 
             this.button4.Location = new System.Drawing.Point(149, 550);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(75, 28);
             this.button4.TabIndex = 7;
             this.button4.Text = "Nouveau";
             this.button4.UseVisualStyleBackColor = true;
@@ -137,6 +137,7 @@
             // gUser
             // 
             this.gUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gUser.BackgroundColor = System.Drawing.Color.White;
             this.gUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -181,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 579);
+            this.ClientSize = new System.Drawing.Size(792, 583);
             this.Controls.Add(this.gUser);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

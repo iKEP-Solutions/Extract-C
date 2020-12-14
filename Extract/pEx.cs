@@ -80,6 +80,7 @@ namespace Extract
 
             try
             {
+
                 Microsoft.Office.Interop.Excel.Application APP = Globals.CompoExtract.Application;
                 APP.Calculation = XlCalculation.xlCalculationManual;
 
@@ -98,33 +99,37 @@ namespace Extract
 
                 }
 
-//                int curWS = APP.ActiveSheet.index;
-
-                //            Dim curWS As Integer = APP.ActiveSheet.index
-                //            Dim parWS As Integer = 0
-                //            Dim curCol = APP.ActiveCell.Column
-                //            Dim curlig = APP.ActiveCell.Row
-                if (APP.ActiveCell.ListObject == null) {
-                    QueryTable Q =  APP.ActiveSheet.ListObjects.Add(SourceType: 0, Source: "OLEDB;" + ExtractConStr, Destination: APP.ActiveCell).QueryTable;
-                    Q.CommandType = XlCmdType.xlCmdSql;
-                    Q.CommandText = sSQL;
-                    Q.RowNumbers = false;
-                    Q.FillAdjacentFormulas = false;
-                    Q.PreserveFormatting = true;
-                    Q.RefreshOnFileOpen = false;
-                    Q.BackgroundQuery = false;
-                    Q.SavePassword = false;
-                    Q.SaveData = true;
-                    Q.AdjustColumnWidth = true;
-                    Q.RefreshPeriod = 0;
-                    Q.PreserveColumnInfo = true;
-                    Q.Refresh(BackgroundQuery: false);
-                } else
+                if (sSQL.Contains("?") )
                 {
-                    MessageBox.Show("Impossible de mettre à jour ce tableau. Veuillez extraire dans un autre onglet !");
+                    fCrit fc = new fCrit();
+                    fc.laReq = sSQL;
+                    fc.ShowDialog();
+                    sSQL = fc.laReq;
+                    fc.Dispose();
                 }
-                APP.Calculation = XlCalculation.xlCalculationAutomatic;
-
+                
+                if ( sSQL !="") { 
+                    if (APP.ActiveCell.ListObject == null) {
+                        QueryTable Q =  APP.ActiveSheet.ListObjects.Add(SourceType: 0, Source: "OLEDB;" + ExtractConStr, Destination: APP.ActiveCell).QueryTable;
+                        Q.CommandType = XlCmdType.xlCmdSql;
+                        Q.CommandText = sSQL;
+                        Q.RowNumbers = false;
+                        Q.FillAdjacentFormulas = false;
+                        Q.PreserveFormatting = true;
+                        Q.RefreshOnFileOpen = false;
+                        Q.BackgroundQuery = false;
+                        Q.SavePassword = false;
+                        Q.SaveData = true;
+                        Q.AdjustColumnWidth = true;
+                        Q.RefreshPeriod = 0;
+                        Q.PreserveColumnInfo = true;
+                        Q.Refresh(BackgroundQuery: false);
+                    } else
+                    {
+                        MessageBox.Show("Impossible de mettre à jour ce tableau. Veuillez extraire dans un autre onglet !");
+                    }
+                    APP.Calculation = XlCalculation.xlCalculationAutomatic;
+                }
             }
             catch (Exception ex)
             {
@@ -144,11 +149,14 @@ namespace Extract
             if (passe.ShowDialog()== DialogResult.OK) {
                 Form leP = new fParamSQL();
                 leP.ShowDialog();
+                leP.Dispose();
                 AfficheVue();
             }
-
-
         }
 
+        private void i_info_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

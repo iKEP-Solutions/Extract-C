@@ -73,6 +73,26 @@ namespace Extract.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Extrac2t1 {
+            get {
+                object obj = ResourceManager.GetObject("Extrac2t1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Extrac3t_fw {
+            get {
+                object obj = ResourceManager.GetObject("Extrac3t.fw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap info3_16_fw {
             get {
                 object obj = ResourceManager.GetObject("info3-16.fw", resourceCulture);

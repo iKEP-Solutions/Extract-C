@@ -70,7 +70,12 @@ namespace Extract
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            fConnect fc = new fConnect();
+            fc.ShowDialog();
+            string laVal = Common.ComboGetVal(this.lCon);
+            Common.ComboFill("Select constr_id, Nom from extract.ConnectionString", this.lCon, ref LaConnect);
+            Common.ComboSetVal(laVal,this.lCon);
+            fc.Dispose();
         }
 
         private void lVue_SelectedIndexChanged(object sender, EventArgs e)

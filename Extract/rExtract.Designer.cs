@@ -45,19 +45,19 @@
             // 
             this.Asyst.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
             this.Asyst.Groups.Add(this.group1);
-            this.Asyst.Label = "Asyst";
+            this.Asyst.Label = "!KEP";
             this.Asyst.Name = "Asyst";
             // 
             // group1
             // 
             this.group1.Items.Add(this.button1);
-            this.group1.Label = "Outils";
+            this.group1.Label = "Extract";
             this.group1.Name = "group1";
             // 
             // button1
             // 
             this.button1.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.button1.Image = global::Extract.Properties.Resources.Extrac2t_fw;
+            this.button1.Image = global::Extract.Properties.Resources.Extrac3t_fw;
             this.button1.Label = "Extract";
             this.button1.Name = "button1";
             this.button1.ShowImage = true;
