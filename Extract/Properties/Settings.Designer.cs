@@ -26,13 +26,13 @@ namespace Extract.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Provider=SQLOLEDB.1;Persist Security Info=True;Password=Bgt56yhN;User ID=cssql201" +
-            "7;Server=dmssqlc1\\app;Database=Apps;")]
-        public string VueConStr {
+            "7;Server=pmssqlc1\\app;Database=Apps;")]
+        public string VueConStr2 {
             get {
-                return ((string)(this["VueConStr"]));
+                return ((string)(this["VueConStr2"]));
             }
             set {
-                this["VueConStr"] = value;
+                this["VueConStr2"] = value;
             }
         }
     }

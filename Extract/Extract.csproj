@@ -30,10 +30,10 @@
     <DefineConstants>VSTO40</DefineConstants>
     <IsWebBootstrapper>False</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <PublishUrl>\\nasc1\data\ikep\Deploiement\VSTO\BI-Extract\</PublishUrl>
+    <PublishUrl>\\nasc1\Data\iKEP\Deploiement\VSTO\BI-Extract\</PublishUrl>
     <InstallUrl />
     <TargetCulture>fr</TargetCulture>
-    <ApplicationVersion>3.0.0.1</ApplicationVersion>
+    <ApplicationVersion>3.0.0.2</ApplicationVersion>
     <AutoIncrementApplicationRevision>false</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>0</UpdateInterval>
@@ -315,7 +315,7 @@
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
         <ProjectProperties HostName="Excel" HostPackage="{29A7B9D7-A7F1-4328-8EF0-6B2D1A56B2C1}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="Excel" Language="cs" TemplatesPath="" DebugInfoExeName="#Software\Microsoft\Office\16.0\Excel\InstallRoot\Path#excel.exe" DebugInfoCommandLine="/x" AddItemTemplatesGuid="{51063C3A-E220-4D12-8922-BDA915ACD783}" />
         <Host Name="Excel" GeneratedCodeNamespace="Extract" PublishedHash="69C324AB27932AA2FBF2B7EA72250886FF164DE6" IconIndex="0">
-          <HostItem Name="ThisAddIn" Code="CompoExtract.cs" CanonicalName="AddIn" CanActivate="false" IconIndex="1" Blueprint="CompoExtract.Designer.xml" GeneratedCode="CompoExtract.Designer.cs" PublishedHash="BE415047C0AD4D04D47343803341DA54B0492B6C" />
+          <HostItem Name="ThisAddIn" Code="CompoExtract.cs" CanonicalName="AddIn" PublishedHash="BE415047C0AD4D04D47343803341DA54B0492B6C" CanActivate="false" IconIndex="1" Blueprint="CompoExtract.Designer.xml" GeneratedCode="CompoExtract.Designer.cs" />
         </Host>
       </FlavorProperties>
     </VisualStudio>

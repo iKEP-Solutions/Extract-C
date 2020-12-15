@@ -30,11 +30,13 @@ namespace Extract
             bool Init = false;
             try
             {
-                lVue.Items.Clear();
+                lVue.DataSource = null;
+                lVue.Items.Clear();   
                 APP.StatusBar = "Vues...";
                 tInit.Text = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
-                Properties.Settings.Default.Reload();
-                Common.ConnexionInit(Properties.Settings.Default.VueConStr, ref LaConnect);
+
+                Extract.Properties.Settings.Default.Reload();
+                Common.ConnexionInit(Extract.Properties.Settings.Default.VueConStr2, ref LaConnect);
                 if (Common.ConnexionTest(LaConnect.ConnectionString))
                 {
                     Init = true;
@@ -44,8 +46,9 @@ namespace Extract
                     Init = false;
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 Init = false;
                 tInit.Text = "Non Connecté";
             }
@@ -94,10 +97,10 @@ namespace Extract
                 if (LeRs.Read())
                 {
                     //on créer la requete
-                    sSQL = LeRs.GetString(0) + LeRs.GetString(1);  //+ " " + LeRs.GetString(1);
+                    sSQL = LeRs.GetString(0) +" " + LeRs.GetString(1);  //+ " " + LeRs.GetString(1);
                     ExtractConStr = LeRs.GetString(2);
 
-                }
+                }    
 
                 if (sSQL.Contains("?") )
                 {

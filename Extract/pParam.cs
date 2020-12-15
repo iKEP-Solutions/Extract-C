@@ -20,8 +20,8 @@ namespace Extract
 
         private void pParam_Load(object sender, EventArgs e)
         {
-            Properties.Settings.Default.Reload();
-            pGrid1.SelectedObject = Properties.Settings.Default;
+            Extract.Properties.Settings.Default.Reload();
+            pGrid1.SelectedObject = Extract.Properties.Settings.Default;
             Version version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
             this.Text = "Paramètres " + version.ToString();
 
@@ -29,8 +29,8 @@ namespace Extract
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.Reload();
-            if (Common.ConnexionTest(Properties.Settings.Default.VueConStr)) {
+           Extract.Properties.Settings.Default.Reload();
+            if (Common.ConnexionTest(Extract.Properties.Settings.Default.VueConStr2)) {
                 MessageBox.Show("Connexion OK");
             } else {
                 MessageBox.Show("Erreur Connection");
@@ -45,7 +45,7 @@ namespace Extract
 
         private void bOK_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.Save();
+            Extract.Properties.Settings.Default.Save();
             DialogResult = DialogResult.OK;
             Close();
         }

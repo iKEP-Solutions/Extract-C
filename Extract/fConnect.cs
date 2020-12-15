@@ -12,8 +12,8 @@ namespace Extract
         {
             try
             {
-                Properties.Settings.Default.Reload();
-                Common.ConnexionInit(Properties.Settings.Default.VueConStr, ref LaConnect);
+                Extract.Properties.Settings.Default.Reload();
+                Common.ConnexionInit(Extract.Properties.Settings.Default.VueConStr2, ref LaConnect);
             }
             catch (Exception Ex)
             {
